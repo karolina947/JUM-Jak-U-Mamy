@@ -1,0 +1,221 @@
+<html>
+    <head>
+        <title>JUM - Jak U Mamy</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="script.js">
+        <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Oswald:wght@500&family=Pathway+Gothic+One&family=Roboto:wght@300&display=swap" rel="stylesheet">  
+        <link rel='stylesheet' href='fontello/css/fontello.css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class='container'>
+            <section class='header'>
+                <img src='img/logo.png' alt='Logo restauracji JUM' />
+                <h1>jak u mamy</h1>
+            </section>
+            <section class='nav'>
+                <ul>
+                    <li class='dropdown'>
+                        <button onclick="myFunction()" class="dropbtn">menu</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#">poniedziałek</a>
+                          <a href="#">wtorek</a>
+                          <a href="#">środa</a>
+                          <a href="#">czwartek</a>
+                          <a href="#">piątek</a>
+                          <a href="#">sobota</a>
+                          <a class='border-bottom' href="#">niedziela</a>
+                          <a href="#about-us">o nas</a>
+                          <a href="#contact">kontakt</a>
+                        </div>
+                    </li>
+                    <li>
+                        <p>
+                            <a href='#about-us'>o nas</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href='#contact'>kontakt</a>
+                        </p>
+                    </li>
+                    <li>
+                        <img src='img/kosz.png' alt='kosz na zakupy' />
+                    </li>
+                </ul>
+            </section>
+            <section class='day'>
+                <script src='script.js'></script>
+            </section>
+            <section class='food-container'>
+                <div class='all-food'>
+                    <div class='food'>
+                        <div class='meal'>
+                            <img src='img/food.jpeg' alt='Schabowy z frytkami i surówką.'>
+                        </div>
+                        <div class='title'>
+                            <p>Miska pyszności</p>
+                        </div>
+                        <div class='desc'>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices nisi vitae sem aliquet, imperdiet aliquet ante condimentum.</p>
+                        </div>
+                        <div class='info'>
+                            <div class='price'>
+                                <p> cena:<span id='price'> 23</span> zł</p>
+                            </div>
+                            <div class='amount'>
+                                <label for='amount'>
+                                    <p>ilość:</p>
+                                </label>
+                                <div class="number-input">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                    <input class="quantity" min="1" max='20' name="quantity" value="1" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class='btn dropbtn-basket'  onclick="myFunctionBasket()">do koszyka</div>
+    
+                        <div id="myDropdownBasket" class="dropdown-content-basket">
+                            <h4>Twoje zamówienie</h4>
+                            <p>Nazwa zamówienia:</p>
+                            <p id='nameOrder'></p>
+                            <p>Cena:</p>
+                            <p id='priceOrder'></p>
+                            <p>Ilość:</p>
+                            <p id='amountOrder'></p>
+                            <p>RAZEM:</p>
+                            <p id='totalPrice'></p>
+                            <a href='#' class='action'>Zamów i zapłać</a>
+                        </div>
+                    </div>
+    
+                    <div class='food'>
+                        <div class='meal'>
+                            <img src='img/food1.jpeg' alt='Schabowy z frytkami i surówką.'>
+                        </div>
+                        <div class='title'>
+                            <p>Krem grzybowo-warzywny</p>
+                        </div>
+                        <div class='desc'>
+                            <p>Duis sodales elit eu augue lobortis, at facilisis orci pellentesque. Fusce consectetur tortor ante, a vestibulum nisi vehicula quis. In at diam ac diam.</p>
+                        </div>
+                        <div class='info'>
+                            <div class='price'>
+                                <p> cena:<span id='price'> 9</span> zł</p>
+                            </div>
+                            <div class='amount'>
+                                <label for='amount'>
+                                    <p>ilość:</p>
+                                </label>
+                                <div class="number-input">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                    <input class="quantity" min="1" max='20' name="quantity" value="1" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class='btn'>do koszyka</div>
+                    </div>
+    
+                    <div class='food'>
+                        <div class='meal'>
+                            <img src='img/food2.jpeg' alt='Schabowy z frytkami i surówką.'>
+                        </div>
+                        <div class='title'>
+                            <p>Deska smakosza</p>
+                        </div>
+                        <div class='desc'>
+                            <p>Sed sagittis fringilla metus. Praesent ullamcorper elit mauris, sed interdum nisl iaculis et.</p>
+                        </div>
+                        <div class='info'>
+                            <div class='price'>
+                                <p> cena:<span id='price'> 33</span> zł</p>
+                            </div>
+                            <div class='amount'>
+                                <label for='amount'>
+                                    <p>ilość:</p>
+                                </label>
+                                <div class="number-input">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                    <input class="quantity" min="1" max='20' name="quantity" value="1" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class='btn'>do koszyka</div>
+                    </div>
+    
+                    <div class='food'>
+                        <div class='meal'>
+                            <img src='img/food3.jpeg' alt='Pizza z pieczarkami i ostrą papryką.'>
+                        </div>
+                        <div class='title'>
+                            <p>Pizza pieryka</p>
+                        </div>
+                        <div class='desc'>
+                            <p>Phasellus a lectus velit. Pellentesque sagittis risus a neque laoreet suscipit. Nulla cursus rhoncus velit. Proin faucibus faucibus urna at pharetra. Aenean quis velit venenatis.</p>
+                        </div>
+                        <div class='info'>
+                            <div class='price'>
+                                <p> cena:<span id='price'> 22</span> zł</p>
+                            </div>
+                            <div class='amount'>
+                                <label for='amount'>
+                                    <p>ilość:</p>
+                                </label>
+                                <div class="number-input">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                                    <input class="quantity" min="1" max='20' name="quantity" value="1" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class='btn'>do koszyka</div>
+                    </div>
+                </div>
+            </section>
+            <section class='phone'>
+                <p>Zamów przez telefon: +48 678 789 101</p>
+            </section>
+            <section class='about'>
+                <h3 id='about-us'>Jak u mamy, czyli kim jesteśmy</h3>
+                <div>
+                    <img src='img/rest.jpeg' alt='Nasza restauracja.'>
+                </div>
+                <div class='about-text'>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt enim at ultricies. Sed rutrum condimentum laoreet. Pellentesque congue tempus nisl non ultrices. Aliquam tortor diam, dictum sit amet euismod at, tincidunt eget est. Nam non tortor ut est dictum ullamcorper facilisis eu sem.</p>
+                     
+                    <p class='about-text-hs'>Praesent et tincidunt lorem. Donec augue diam, varius non nisi at, posuere fermentum augue. Aliquam blandit lorem euismod nibh ultrices placerat. Nulla maximus gravida est id interdum.</p>
+                    <button id='about-button'>Czytaj więcej</button>
+                </div>
+            </section>
+            <section class='contact'>
+                <h3 id='contact'>Kontakt</h3>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.6923490926692!2d18.212040915722493!3d51.11413617957254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47107b2798903257%3A0x8237e1309adaf04a!2sHetma%C5%84ska+Restaurant+%26+Pub!5e0!3m2!1spl!2spl!4v1563548386338!5m2!1spl!2spl" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <p><b>Adres:</b><br>
+                Restauracja Jak U Mamy<br>
+                ul. Ogrody 23<br>
+                89-567 Nowy Sącz</p>
+                <p><b>Godziny otwarcia:</b><br>
+                Pn-Sb 13:00 - 22:00<br>
+                Ndz 13:00 - 0:00</p>
+                <p><b>Telefon:</b><br>
+                +48 678 789 101</p>
+                <p><b>E-mail:</b><br>
+                jakumamy@restauracja.com</p>
+            </div>
+            </section>
+            <footer>
+                <i class="demo-icon icon-facebook-squared"></i>
+                <i class="demo-icon icon-twitter-rect"></i>
+                <p>Copyright by Lorem Ipsum 2020</p>
+            </footer>
+        </div>
+    </body>
+</html>
